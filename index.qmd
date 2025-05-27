@@ -2,7 +2,11 @@
 title: "Elias Dewald"
 ---
 
-Hello! My name is Eli and I'm a 3rd year Environmental Studies student at the University of California Santa Barbara.
+Hello! My name is Eli and I'm a 3rd year Environmental Studies student at the University of California Santa Barbara and student worker for the UCSB Cheadle
+Center for Biodiversity and Ecological Restoration. I enjoy doing restoration
+work, working with plants, and learning and implementing strategies to ensure
+the success of projects. Outside of work, I love surfing, hiking, cooking, and 
+socializing. Check out the rest of my website to learn more about me!
 
 ```{r}
 
