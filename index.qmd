@@ -1,11 +1,10 @@
 ---
-title: "eliasdewald.github.io"
+title: "Elias Dewald"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hello! My name is Eli and I'm a 3rd year Environmental Studies student at the 
+University of California Santa Barbara.
 
 ```{r}
-1 + 1
+
 ```
