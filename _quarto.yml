@@ -11,14 +11,13 @@ website:
       - href: about.qmd
         text: About Me
       - Projects.qmd
-      - href: Hobbies.qmd
-        text: Hobbies
       - Resume.qmd
+      - Hobbies.qmd
       
 
 format:
   html:
-    theme: brite
+    theme: minty
     css: styles.css
     toc: true
     page-layout: full
