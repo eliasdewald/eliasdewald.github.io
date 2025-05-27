@@ -1,6 +1,0 @@
----
-title: "Hobbies"
-format: html
----
-
-Filler
