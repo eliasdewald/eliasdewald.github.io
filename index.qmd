@@ -1,13 +1,23 @@
 ---
 title: "Elias Dewald"
+image: media/headshot1.jpeg
+2toc: false
+about: 
+3  template: jolla
+4  image-shape: round
+  image-width: 17em
+5  links:
+    - text: LinkedIn
+      href: www.linkedin.com/in/eli-dewald-32945b312
+    - text: GitHub
+      href: https://github.com/eliasdewald
+    - text: Email
+      href: mailto:eliasadewald@gmail.com
 ---
 
 Hello! My name is Eli and I'm a 3rd year Environmental Studies student at the University of California Santa Barbara and student worker for the UCSB Cheadle
 Center for Biodiversity and Ecological Restoration. I enjoy doing restoration
 work, working with plants, and learning and implementing strategies to ensure
-the success of projects. Outside of work, I love surfing, hiking, cooking, and 
+the success of projects. Outside of work, I love surfing, hiking, cooking, and
 socializing. Check out the rest of my website to learn more about me!
 
-```{r}
-
-```
