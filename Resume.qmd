@@ -3,5 +3,30 @@ title: "Resume"
 format: html
 ---
 
-Filler
-TBD
+# Eli Dewald
+
+Isla Vista, CA • (650) 703-2447 • edewald\@ucsb.edu
+
+## Education
+
+University of California, Santa Barbara (UCSB) Expected: June 2026 Bachelor of Science, Environmental Studies GPA: 3.62
+
+## Relevant Coursework
+
+### Ecology
+Ecosystem Processes • Ecological Change • Restoration Skills • Applied Ecology 
+
+### Resource Management
+Biodiversity and Conservation • Conservation Planning • Aquatic Food Management
+
+### Data Science 
+Stats for Env. Science • Elementary Probability and Stats • Quantitative Thinking
+
+### Mapping 
+GIS for Env. Applications • Maps & Spatial Reasoning • Geography of Surfing
+
+## Experience
+
+### Restoration Student Worker - UCSB Cheadle Center
+
+-   
