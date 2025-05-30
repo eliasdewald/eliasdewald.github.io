@@ -1,33 +1,46 @@
 ---
 title: "About Me"
+lightbox: true
 ---
 
 # Hometown - Half Moon Bay, CA
 
-![](media/HMB.png){height="3in"}
+::: {layout-ncol=2}
 
-I'm from a small town about thirty minutes south of San Francisco called Half Moon Bay. It is a truly beautiful place as it is sandwiched between the Pacific Ocean on one side and mountains on the other side, much like Santa Barbara. Growing up there cemented my love for the outdoors, and especially the mountains and the sea.
+![](media/HMB.png){height="3.5in"}
+
+![](media/HMB2.jpg){height="3.5in"}
+:::
+
+I'm from a small town about thirty minutes south of San Francisco called Half Moon Bay. It is a truly beautiful place as it is sandwiched between the Pacific Ocean on one side and the Santa Cruz mountains on the other side, so similar to how it is here in Santa Barbara. Growing up there cemented my love for the outdoors, especially the mountains and the sea.
+
+# Education
+
+I'm currently in the spring quarter of my 3rd year studying Environmental Studies at UCSB. I am pursuing a Bachelor's of Science, so I've been taking many science classes during my time here. Of the sciences, ecology is the subject I've found most interesting. I specifically enjoy topics like ecological restoration and management, as well as community ecology, plant ecology, and fire ecology. Additionally, I've liked learning how to use tools like RStudio and ArcGIS Pro to help analyze and visualize data within these fields. 
 
 # Favorite Plants
 
-Over the past few years, I've really grown to appreciate the plants around me. I've always liked plants, but I enjoy being in there company more now and have a few local favorites.
+Over the past few years, I've really grown to appreciate the plants around me. I've always liked plants, but I enjoy being in there company more now. I also have a few local favorites.
 
 ### 1. *Juncus bufonius* - Common toad rush
 
-![](media/j_bufonius.jpg){height="2in"}
+
+![](media/j_bufonius.jpg){height="2.5in" group="plant-gallery" fig-align="center"}
 
 I love their rusty colored flowers, especially during the drier parts of the year when they begin to pop more due to the color contrast with the rest of their structure.
 
 ### 2. *Centromadia parryi spp. australis* - Southern tarplant
 
-![](media/c_parryi.jpeg){height="2in"}
 
-I like how spiky these plants are and their small yellow flowers. Also a California Rare Plant Rank: 1B.1 which I find pretty neat. Took this photo on 05/28/2025!
+![](media/c_parryi.jpeg){height="2.5in" group="plant-gallery" fig-align="center"}
 
-### 2. *Artemesia californica* - California sagebrush
+I like how spiky tarplant is and its small yellow flowers. Also a California Rare Plant Rank: 1B.1 which I find pretty neat considering we have them on campus. Took this photo on 05/28/2025!
 
-![](media/a_californica.jpg){height="2in"}
+### 3. *Artemesia californica* - California sagebrush
+
+
+![](media/a_californica.jpg){height="2.5in" group="plant-gallery" fig-align="center"}
 
 I'm a big fan of the smell of sagebrush. It's always a treat to run my hands through one to get smell their herbaceous scent.
 
-# TBD
+
