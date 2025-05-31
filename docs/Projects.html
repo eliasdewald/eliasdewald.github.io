@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -123,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link active" data-scroll-target="#rstudio">RStudio</a></li>
+  <li><a href="#using-rstudio-to-analyze-site-data-for-envs-153-final-project" id="toc-using-rstudio-to-analyze-site-data-for-envs-153-final-project" class="nav-link active" data-scroll-target="#using-rstudio-to-analyze-site-data-for-envs-153-final-project">Using RStudio to Analyze Site Data for ENVS 153 Final Project</a></li>
   <li><a href="#gis" id="toc-gis" class="nav-link" data-scroll-target="#gis">GIS</a></li>
   </ul>
 </nav>
@@ -150,9 +184,87 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="rstudio" class="level1">
-<h1>RStudio</h1>
-<p>Filler</p>
+<section id="using-rstudio-to-analyze-site-data-for-envs-153-final-project" class="level1">
+<h1>Using RStudio to Analyze Site Data for ENVS 153 Final Project</h1>
+<p>This quarter I took a class where our group was tasked with selecting a site in a natural area and gathering data from it throughout. Within a 1 meter plot in our site at Lagoon Island, we observed temperature, precipitation, the composition of the plant community, flower count, the composition of the bird community, insect counts, and pollinator counts at the same time every week over 8 weeks. We developed hypotheses of what we expected to see out of our data. One of which was that we predicted that flower count predicts pollinator count and that there is a positive linear relationship between the two variables. To describe the linear relationship between the two variables, I built a model using ordinary least squares, ran a Pearson’s r test, and visualized the model predictions.</p>
+<p>Based on our model predictions, pollinator count decreases by about 0.05 individuals for every 1 increase in flower count (linear regression, F<sub>1,6</sub> = 0.25, <em>P</em> = 0.63). There is a weak negative linear relationship between flower count and pollinator count (Pearson’s r = 0.20). Based on our findings, we do not have evidence to reject the null hypothesis that flower count does not predict pollinator count. These results may be explained by our low sample size (n = 8), as we were only able to observe our site over 8 weeks.</p>
+<p>The code is below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># loading packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janitor)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/ES-153_Data.csv"</span>) <span class="sc">|&gt;</span> <span class="co"># creating new object by reading in data</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>() <span class="co"># cleaning column names</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>flower_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(pollinator_count <span class="sc">~</span> flower_count, <span class="co"># building linear model where pollinator count is predicted by flower count</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> data1) <span class="co"># setting data frame</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(flower_model) <span class="co"># generating model summary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = pollinator_count ~ flower_count, data = data1)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -7.79  -4.53  -2.01   2.29  17.30 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)  15.17719   11.59945   1.308    0.239
+flower_count -0.04797    0.09674  -0.496    0.638
+
+Residual standard error: 8.562 on 6 degrees of freedom
+Multiple R-squared:  0.03936,   Adjusted R-squared:  -0.1207 
+F-statistic: 0.2459 on 1 and 6 DF,  p-value: 0.6376</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>flower_predict <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(flower_model, <span class="co"># predicting based off of model</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">terms =</span> <span class="st">"flower_count"</span>) </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(data1<span class="sc">$</span>flower_count, data1<span class="sc">$</span>pollinator_count, <span class="co"># running test of correlation between flower count and pollinator count</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">method =</span> <span class="st">"pearson"</span>) <span class="co"># selecting test</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  data1$flower_count and data1$pollinator_count
+t = -0.49584, df = 6, p-value = 0.6376
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.7923043  0.5885556
+sample estimates:
+       cor 
+-0.1984027 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data1, <span class="co"># setting data frame for plot</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>       <span class="fu">aes</span>(<span class="at">x =</span> flower_count, <span class="co"># setting x-axis</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> pollinator_count)) <span class="sc">+</span> <span class="co"># setting y-axis</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>, <span class="co"># adding points and setting size</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>             <span class="at">fill =</span> <span class="st">"darkgoldenrod1"</span>, <span class="co"># setting fill color of points</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">shape =</span> <span class="dv">21</span>, <span class="co"># setting shape of points</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">stroke =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="co"># setting size of outline of points</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_ribbon</span>(<span class="at">data =</span> flower_predict, <span class="co"># plotting confidence interval</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>           <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># setting x-axis</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">y =</span> predicted, <span class="co"># setting y-axis</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>              <span class="at">ymax =</span> conf.high, <span class="co"># setting upper bound of confidence interval</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>              <span class="at">ymin =</span> conf.low), <span class="co"># setting lower bound of confidence interval</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>           <span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="co"># setting transparency of confidence interval</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> flower_predict, <span class="co"># plotting line based off of model predictions</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="co"># setting x axis</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> predicted), <span class="co"># setting y axis</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span>  <span class="co"># setting width of line</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flower Count"</span>, <span class="co"># labeling x-axis</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Pollinator Count"</span>) <span class="co"># labeling y-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Projects_files/figure-html/Plotting Model-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="gis" class="level1">
 <h1>GIS</h1>
