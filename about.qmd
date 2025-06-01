@@ -5,12 +5,24 @@ lightbox: true
 
 # Hometown - Half Moon Bay, CA
 
-::: {layout-ncol=2}
+```{r}
+#| echo: false
+library(leaflet)
 
-![](media/HMB.png){height="3.5in"}
+Map <- leaflet() |> 
+  addTiles() |>   # add street map tiles
+  addMarkers(lng=-122.4286, lat=37.4636, popup="Half Moon Bay") |> # add marker at Half Moon Bay
+  fitBounds(-120, 32, -115, 42) # set map bounds
+```
+
+```{r}
+#| echo: false
+Map
+```
+
+
 
 ![](media/HMB2.jpg){height="3.5in"}
-:::
 
 I'm from a small town about thirty minutes south of San Francisco called Half Moon Bay. It is a truly beautiful place as it is sandwiched between the Pacific Ocean on one side and the Santa Cruz mountains on the other side, so similar to how it is here in Santa Barbara. Growing up there cemented my love for the outdoors, especially the mountains and the sea.
 

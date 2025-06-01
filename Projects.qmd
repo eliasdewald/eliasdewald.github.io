@@ -61,3 +61,16 @@ I took a GIS class this quarter where we were tasked with a group project that r
 
 ![](media/layout.jpg){height="4.5in"}
 
+# Using Leaflet in RStudio to Build an Interactive Map 
+
+I used the leaflet package and built some code to display my hometown of Half Moon Bay on a map. The map was created for my "About Me" page.
+
+```{r}
+library(leaflet)
+
+Map <- leaflet() |> 
+  addTiles() |>   # add street map tiles
+  addMarkers(lng=-122.4286, lat=37.4636, popup="Half Moon Bay") |> # add marker at Half Moon Bay
+  fitBounds(-125, 32, -113, 42) # set map bounds
+```
+
