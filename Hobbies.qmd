@@ -1,6 +1,6 @@
 ---
 title: "Hobbies"
-format: html
+lightbox: true
 ---
 
 # Surfing
@@ -8,6 +8,7 @@ format: html
 ::: {layout-ncol=2}
 
 ![](media/jetty.jpg){height="3.5in"}
+
 ![](media/surfing.jpg){height="3.5in"}
 :::
 
@@ -19,6 +20,7 @@ Surfing is a big part of the culture of Half Moon Bay, where I grew up. I'm bles
 ::: {layout-ncol=2}
 
 ![](media/Hiking1.jpeg){height="3.5in"}
+
 ![](media/Hiking2.jpeg){height="3.5in"}
 :::
 
@@ -26,12 +28,15 @@ Nature has always been a big part of my life, and hiking has been a great way fo
 
 # Cooking
 
-::: {layout-ncol=2}
+::: {layout-nrow=2}
 
-![](media/chicken.jpg){height="3.5in"}
-![](media/pasta.jpeg){height="3.5in"}
-![](media/soup.jpeg){height="3.5in"}
-![](media/steak.jpeg){height="3.5in"}
+![](media/chicken.jpg){height="2in"}
+
+![](media/pasta.jpeg){height="2in"}
+
+![](media/soup.jpeg){height="2in"}
+
+![](media/steak.jpeg){height="2in"}
 :::
 
 Cooking is one of my favorite hobbies, and I would like to consider it a talent. I love preparing food for my friends and family, I love experimenting and eyeballing, and I've found a lot of success with both. I am working on my presentation skills, but I think I have the flavor down for many dishes.
