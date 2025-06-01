@@ -12,14 +12,13 @@ library(leaflet)
 Map <- leaflet() |> 
   addTiles() |>   # add street map tiles
   addMarkers(lng=-122.4286, lat=37.4636, popup="Half Moon Bay") |> # add marker at Half Moon Bay
-  fitBounds(-120, 32, -115, 42) # set map bounds
+  setView(-119.4179, 36.7783, zoom = 5) # set map view and zoom
 ```
 
 ```{r}
 #| echo: false
 Map
 ```
-
 
 
 ![](media/HMB2.jpg){height="3.5in"}
