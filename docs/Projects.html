@@ -157,8 +157,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-rstudio-to-analyze-site-data-for-envs-153-final-project" id="toc-using-rstudio-to-analyze-site-data-for-envs-153-final-project" class="nav-link active" data-scroll-target="#using-rstudio-to-analyze-site-data-for-envs-153-final-project">Using RStudio to Analyze Site Data for ENVS 153 Final Project</a></li>
-  <li><a href="#gis" id="toc-gis" class="nav-link" data-scroll-target="#gis">GIS</a></li>
+  <li><a href="#using-rstudio-to-analyze-site-data" id="toc-using-rstudio-to-analyze-site-data" class="nav-link active" data-scroll-target="#using-rstudio-to-analyze-site-data">Using RStudio to Analyze Site Data</a></li>
+  <li><a href="#using-gis-to-identify-landscapes-suitable-for-wildfire-risk-treatments-adjacent-to-southern-california-communities" id="toc-using-gis-to-identify-landscapes-suitable-for-wildfire-risk-treatments-adjacent-to-southern-california-communities" class="nav-link" data-scroll-target="#using-gis-to-identify-landscapes-suitable-for-wildfire-risk-treatments-adjacent-to-southern-california-communities">Using GIS to Identify Landscapes Suitable for Wildfire Risk Treatments Adjacent to Southern California Communities</a></li>
   </ul>
 </nav>
     </div>
@@ -184,8 +184,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="using-rstudio-to-analyze-site-data-for-envs-153-final-project" class="level1">
-<h1>Using RStudio to Analyze Site Data for ENVS 153 Final Project</h1>
+<section id="using-rstudio-to-analyze-site-data" class="level1">
+<h1>Using RStudio to Analyze Site Data</h1>
 <p>This quarter I took a class where our group was tasked with selecting a site in a natural area and gathering data from it throughout. Within a 1 meter plot in our site at Lagoon Island, we observed temperature, precipitation, the composition of the plant community, flower count, the composition of the bird community, insect counts, and pollinator counts at the same time every week over 8 weeks. We developed hypotheses of what we expected to see out of our data. One of which was that we predicted that flower count predicts pollinator count and that there is a positive linear relationship between the two variables. To describe the linear relationship between the two variables, I built a model using ordinary least squares, ran a Pearson’s r test, and visualized the model predictions.</p>
 <p>Based on our model predictions, pollinator count decreases by about 0.05 individuals for every 1 increase in flower count (linear regression, F<sub>1,6</sub> = 0.25, <em>P</em> = 0.63). There is a weak negative linear relationship between flower count and pollinator count (Pearson’s r = 0.20). Based on our findings, we do not have evidence to reject the null hypothesis that flower count does not predict pollinator count. These results may be explained by our low sample size (n = 8), as we were only able to observe our site over 8 weeks.</p>
 <p>The code is below:</p>
@@ -266,9 +266,10 @@ sample estimates:
 </div>
 </div>
 </section>
-<section id="gis" class="level1">
-<h1>GIS</h1>
-<p>Filler</p>
+<section id="using-gis-to-identify-landscapes-suitable-for-wildfire-risk-treatments-adjacent-to-southern-california-communities" class="level1">
+<h1>Using GIS to Identify Landscapes Suitable for Wildfire Risk Treatments Adjacent to Southern California Communities</h1>
+<p>I took a GIS class this quarter where we were tasked with a group project that required us to use GIS to address an environmental issue. We chose to highlight wildfire risk near urban communities in southern California and areas suitable for wildfire risk reduction treatments. We compiled different data layers, including California counties, urban areas, and disadvantaged communities, and then carried out spatial analyses visualized them on a map, with the idea in mind of informing landowners and managers.</p>
+<p><img src="media/layout.jpg" style="height:4.5in"></p>
 
 
 </section>

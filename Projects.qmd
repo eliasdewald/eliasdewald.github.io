@@ -3,7 +3,7 @@ title: "Projects"
 format: html
 ---
 
-# Using RStudio to Analyze Site Data for ENVS 153 Final Project
+# Using RStudio to Analyze Site Data 
 
 This quarter I took a class where our group was tasked with selecting a site in a natural area and gathering data from it throughout. Within a 1 meter plot in our site at Lagoon Island, we observed temperature, precipitation, the composition of the plant community, flower count, the composition of the bird community, insect counts, and pollinator counts at the same time every week over 8 weeks. We developed hypotheses of what we expected to see out of our data. One of which was that we predicted that flower count predicts pollinator count and that there is a positive linear relationship between the two variables. To describe the linear relationship between the two variables, I built a model using ordinary least squares, ran a Pearson's r test, and visualized the model predictions. 
 
@@ -55,6 +55,9 @@ ggplot(data = data1, # setting data frame for plot
 
 
 
-# GIS
+# Using GIS to Identify Landscapes Suitable for Wildfire Risk Treatments  Adjacent to Southern California Communities
 
-Filler
+I took a GIS class this quarter where we were tasked with a group project that required us to use GIS to address an environmental issue. We chose to highlight wildfire risk near urban communities in southern California and areas suitable for wildfire risk reduction treatments. We compiled different data layers, including California counties, urban areas, and disadvantaged communities, and then carried out spatial analyses visualized them on a map, with the idea in mind of informing landowners and managers. 
+
+![](media/layout.jpg){height="4.5in"}
+
