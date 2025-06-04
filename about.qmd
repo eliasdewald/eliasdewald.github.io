@@ -15,13 +15,13 @@ Map <- leaflet() |>
   setView(-119.4179, 36.7783, zoom = 5) # set map view and zoom
 ```
 
-```{r}
+```{r out.width = '90%'}
 #| echo: false
 Map
 ```
 
 
-![](media/HMB2.jpg){height="3.5in"}
+**Map 1. The location of Half Moon Bay on a map of California.**
 
 I'm from a small town about thirty minutes south of San Francisco called Half Moon Bay. It is a truly beautiful place as it is sandwiched between the Pacific Ocean on one side and the Santa Cruz mountains on the other side, so similar to how it is here in Santa Barbara. Growing up there cemented my love for the outdoors, especially the mountains and the sea.
 
