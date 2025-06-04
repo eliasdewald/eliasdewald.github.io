@@ -5,38 +5,34 @@ lightbox: true
 
 # Surfing
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 ![My local break](media/jetty.jpg){height="3.5in"}
 
 ![](media/surfing.jpg){height="3.5in"}
 :::
 
-Surfing is a big part of the culture of Half Moon Bay, where I grew up. I'm blessed enough to be able to partake in it and have been surfing for years. 
-
+Surfing is a big part of the culture of Half Moon Bay, where I grew up. I'm blessed enough to be able to partake in it and have been surfing for years.
 
 # Hiking
 
-::: {layout-ncol=2}
-
+::: {layout-ncol="2"}
 ![](media/Hiking1.jpeg){height="2.5in"}
 
 ![](media/Hiking2.jpeg){height="2.5in"}
 :::
 
-Nature has always been a big part of my life, and hiking has been a great way for me to spend more time within it. Trails that incorporate scrambling across boulders and rock faces are my favorite. 
+Nature has always been a big part of my life, and hiking has been a great way for me to spend more time within it. Trails that incorporate scrambling across boulders and rock faces are my favorite.
 
 # Cooking
 
-::: {layout-nrow=2}
+::: {layout-nrow="2"}
+![](media/chicken.jpg){height="2in"}
 
-![Jerk chicken drumsticks](media/chicken.jpg){height="2in"}
+![](media/pasta.jpeg){height="2in"}
 
-![Spicy vodka chicken pasta](media/pasta.jpeg){height="2in"}
+![](media/soup.jpeg){height="2in"}
 
-![Tomato bisque](media/soup.jpeg){height="2in"}
-
-![Marinated tri tip](media/steak.jpeg){height="2in"}
+![](media/steak.jpeg){height="2in"}
 :::
 
 Cooking is one of my favorite hobbies, and I would like to consider it a talent. I love preparing food for my friends and family, I love experimenting and eyeballing, and I've found a lot of success with both. I am working on my presentation skills, but I think I have the flavor down for many dishes.

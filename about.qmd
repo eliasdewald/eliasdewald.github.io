@@ -20,14 +20,13 @@ Map <- leaflet() |>
 Map
 ```
 
-
 **Map 1. The location of Half Moon Bay on a map of California.**
 
 I'm from a small town about thirty minutes south of San Francisco called Half Moon Bay. It is a truly beautiful place as it is sandwiched between the Pacific Ocean on one side and the Santa Cruz mountains on the other side, so similar to how it is here in Santa Barbara. Growing up there cemented my love for the outdoors, especially the mountains and the sea.
 
 # Education
 
-I'm currently in the spring quarter of my 3rd year studying Environmental Studies at UCSB. I am pursuing a Bachelor's of Science, so I've been taking many science classes during my time here. Of the sciences, ecology is the subject I've found most interesting. I specifically enjoy topics like ecological restoration and management, as well as community ecology, plant ecology, and fire ecology. Additionally, I've liked learning how to use tools like RStudio and ArcGIS Pro to help analyze and visualize data within these fields. 
+I'm currently in the spring quarter of my 3rd year studying Environmental Studies at UCSB. I am pursuing a Bachelor's of Science, so I've been taking many science classes during my time here. Of the sciences, ecology is the subject I've found most interesting. I specifically enjoy topics like ecological restoration and management, as well as community ecology, plant ecology, and fire ecology. Additionally, I've liked learning how to use tools like RStudio and ArcGIS Pro to help analyze and visualize data within these fields.
 
 # Favorite Plants
 
@@ -35,13 +34,11 @@ Over the past few years, I've really grown to appreciate the plants around me. I
 
 ### 1. *Juncus bufonius* - Common toad rush
 
-
 ![](media/j_bufonius.jpg){height="2.5in" group="plant-gallery" fig-align="center"}
 
 I love their rusty colored flowers, especially during the drier parts of the year when they begin to pop more due to the color contrast with the rest of their structure.
 
 ### 2. *Centromadia parryi ssp. australis* - Southern tarplant
-
 
 ![](media/c_parryi.jpeg){height="2.5in" group="plant-gallery" fig-align="center"}
 
@@ -49,9 +46,6 @@ I like how spiky tarplant is and its small yellow flowers. Also a California Rar
 
 ### 3. *Artemesia californica* - California sagebrush
 
-
 ![](media/a_californica.jpg){height="2.5in" group="plant-gallery" fig-align="center"}
 
 I'm a big fan of the smell of sagebrush. It's always a treat to run my hands through one to get smell their herbaceous scent.
-
-

@@ -4,43 +4,48 @@ format: html
 ---
 
 # Elias Dewald
+
 Isla Vista, CA • (650) 703-2447 • edewald\@ucsb.edu
 
 ## Education
 
-University of California, Santa Barbara (UCSB) |
-Expected: June 2026
+University of California, Santa Barbara (UCSB) \| Expected: June 2026
 
-Bachelor of Science, Environmental Studies |
-GPA: 3.62
+Bachelor of Science, Environmental Studies \| GPA: 3.62
 
 ## Relevant Coursework
 
 ### Ecology
+
 Ecosystem Processes • Ecological Change • Restoration Skills • Applied Ecology
 
 ### Resource Management
+
 Biodiversity and Conservation • Conservation Planning • Aquatic Food Management
 
 ### Data Science
+
 Stats for Env. Science • Elementary Probability and Stats • Quantitative Thinking
 
 ### Geography
+
 GIS for Env. Applications • Maps & Spatial Reasoning • Geography of Surfing
 
 ## Experience
 
-### Restoration Student Worker - UCSB Cheadle Center              
+### Restoration Student Worker - UCSB Cheadle Center
+
 May 2024 - Present
 
--   Manage exotic plant species using strategies including hand weeding, flame weeding, and     solarization
+-   Manage exotic plant species using strategies including hand weeding, flame weeding, and solarization
 -   Establish and maintain diverse selection of native plant species
 -   Assemble and operate both long term and short term irrigation systems
 -   Conduct vegetation monitoring at managed sites
 -   Thin vegetation in strategical locations to reduce fire danger
 -   Produce mulch and compost
 
-### Surf Instructor - Pillar Point Surf School                    
+### Surf Instructor - Pillar Point Surf School
+
 June 2024 - September 2024
 
 -   Educated individuals of all ages the basics of surfing and water safety
