@@ -19,6 +19,7 @@ format:
     theme: 
       - yeti
       - styles.scss
+    mainfont: Poppins
     toc: true
     page-layout: full
 

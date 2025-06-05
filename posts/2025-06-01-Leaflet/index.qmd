@@ -6,10 +6,10 @@ author:
 date: 06-01-2025
 categories: [R]
 image: "leaflet.png"
-draft: true
+draft: false
 ---
 
-I used the leaflet package and built some code to display my hometown of Half Moon Bay on a map. The map was created for my "About Me" page.
+I used the leaflet package and built some code to display my hometown of Half Moon Bay on a map. The map was created for my "About Me" page. This blog post is more of documenetation of how I got the interactive figure and less of an actual project.
 
 ```{r}
 library(leaflet)
