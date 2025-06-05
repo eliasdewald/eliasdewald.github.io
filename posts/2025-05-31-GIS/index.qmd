@@ -1,0 +1,14 @@
+---
+title: "Using GIS to Identify Landscapes Suitable for Wildfire Risk Treatments Adjacent to Southern California Communities"
+author:
+  - name: Eli Dewald
+    url: https://eliasdewald.github.io/
+date: 05-31-2025
+categories: [GIS]
+image: "layout.jpg"
+draft: true
+---
+
+I took a GIS class this quarter where we were tasked with a group project that required us to use GIS to address an environmental issue. We chose to highlight wildfire risk near urban communities in southern California and areas suitable for wildfire risk reduction treatments. We compiled different data layers, including California counties, urban areas, and disadvantaged communities, and then carried out spatial analyses visualized them on a map, with the idea in mind of informing landowners and managers.
+
+![Map 1](media/layout.jpg){height="4.5in"}

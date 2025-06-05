@@ -1,0 +1,60 @@
+---
+title: "Using RStudio to Analyze Site Data"
+author:
+  - name: Eli Dewald
+    url: https://eliasdewald.github.io/
+date: 05-31-2025
+categories: [R]
+image: graph.png
+draft: true
+---
+
+This quarter I took a class where our group was tasked with selecting a site in a natural area and gathering data from it throughout. Within a 1 meter plot in our site at Lagoon Island, we observed temperature, precipitation, the composition of the plant community, flower count, the composition of the bird community, insect counts, and pollinator counts at the same time every week over 8 weeks. We developed hypotheses of what we expected to see out of our data. One of which was that we predicted that flower count predicts pollinator count and that there is a positive linear relationship between the two variables. To describe the linear relationship between the two variables, I built a model using ordinary least squares, ran a Pearson's r test, and visualized the model predictions.
+
+Based on our model predictions, pollinator count decreases by about 0.05 \pm 0.10 individuals for every 1 increase in flower count (linear regression, F~1,6~ = 0.25, *P* = 0.63). There is a weak negative linear relationship between flower count and pollinator count (Pearson's r = 0.20). Based on our findings, we do not have evidence to reject the null hypothesis that flower count does not predict pollinator count. These results may be explained by our low sample size (n = 8), as we were only able to observe our site over 8 weeks.
+
+
+The code and output are below:
+
+```{r Set-Up}
+#| message: false
+#| warning: false
+library(tidyverse) # loading packages
+library(here)
+library(janitor)
+library(ggeffects)
+data1 <- read.csv("C:/Users/elias/Git/eliasdewald.github.io/posts/data/ES-153_Data.csv") |> # creating new object by reading in data
+  clean_names() # cleaning column names
+```
+
+```{r Building Model}
+flower_model <- lm(pollinator_count ~ flower_count, # building linear model where pollinator count is predicted by flower count
+                   data = data1) # setting data frame
+summary(flower_model) # generating model summary
+flower_predict <- ggpredict(flower_model, # predicting based off of model
+                            terms = "flower_count") 
+cor.test(data1$flower_count, data1$pollinator_count, # running test of correlation between flower count and pollinator count
+         method = "pearson") # selecting test
+```
+
+```{r Plotting Model}
+ggplot(data = data1, # setting data frame for plot
+       aes(x = flower_count, # setting x-axis
+           y = pollinator_count)) + # setting y-axis
+  geom_point(size = 4, # adding points and setting size
+             fill = "darkgoldenrod1", # setting fill color of points
+             shape = 21, # setting shape of points
+             stroke = 1) + # setting size of outline of points
+  geom_ribbon(data = flower_predict, # plotting confidence interval
+           aes(x = x, # setting x-axis
+              y = predicted, # setting y-axis
+              ymax = conf.high, # setting upper bound of confidence interval
+              ymin = conf.low), # setting lower bound of confidence interval
+           alpha = 0.1) + # setting transparency of confidence interval
+  geom_line(data = flower_predict, # plotting line based off of model predictions
+            aes(x = x, # setting x axis
+                y = predicted), # setting y axis
+            linewidth = 1) +  # setting width of line
+  labs(x = "Flower Count", # labeling x-axis
+       y = "Pollinator Count") # labeling y-axis
+```
