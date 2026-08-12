@@ -6,7 +6,7 @@ lightbox: true
 # Surfing
 
 ::: {layout-ncol="2"}
-![My local break](media/jetty.jpg){height="3.5in"}
+![My hometown break](media/jetty.jpg){height="3.5in"}
 
 ![](media/surfing.jpg){height="3.5in"}
 :::
@@ -35,4 +35,4 @@ Nature has always been a big part of my life, and hiking has been a great way fo
 ![](media/steak.jpeg){height="2in"}
 :::
 
-Cooking is one of my favorite hobbies, and I would like to consider it a talent. I love preparing food for my friends and family, I love experimenting and eyeballing, and I've found a lot of success with both. I am working on my presentation skills, but I think I have the flavor down for many dishes.
+Cooking is one of my favorite hobbies, and I would like to consider it a talent. I love preparing food for my friends and family, I love experimenting and eyeballing, and I've found a lot of success with both. I am working on my presentation skills, but I think I have the flavor and texture down for many dishes.
